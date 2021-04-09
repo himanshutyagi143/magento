@@ -1,0 +1,67 @@
+Check the php version of magento
+https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html
+or  your - phpinfo(); to your any php file
+-------------------------------------------------------------------
+First download xampp version or php version 7.2.5
+---------------------------------------------------------------------
+then put the magento file into htdocs folder
+---------------------------------------------------------------------
+then install composer from : https://getcomposer.org/doc/00-intro.md
+--------------------------------------------------------------------
+then install magento from url
+--------------------------------------------------------------------
+
+1.blank page error----------->
+
+https://magento.stackexchange.com/questions/256337/magento-2-3-how-to-fix-blank-admin-page-not-rendering
+then
+goto this location
+xampp/htdocs/vendor/magento/framework/View/Element/Template/File/Validator.php
+line - [112-124]
+=------------------------------------------------------
+
+2. foldername->app->etc->di.xml ---->search symlink---> change into copy [714]
+
+------------------------------------------------------------------
+
+
+3. set path in environment variable--->
+
+https://www.forevolve.com/en/articles/2016/10/27/how-to-add-your-php-runtime-directory-to-your-windows-10-path-environment-variable/
+
+------------------------------------------------------------
+open folder of magento in htdocs then type cmd on link bar then paste the below code
+4. to upgrade any extension and theme:- 
+
+php bin/magento setup:upgrade
+----------------------------------------------------------
+4.1  deployment-->
+php bin/magento setup:static-content:deploy -f
+
+-----------------------------------------------------------
+
+5. to clear cache:-
+
+php bin/magento cache:clean
+
+php bin/magento cache:flush
+
+
+-----------------------------------------------------------
+
+6. to reindex indexers:-
+
+php bin/magento indexer:reindex
+
+------------------------------------------------------------
+
+for theme download:-
+
+https://www.hiddentechies.com/blog/magento-themes/free-magento-2-3-themes/
+
+
+//ref https://www.tutorialspoint.com/magento/index.htm
+
+
+
+
